@@ -29,7 +29,6 @@ jobs:
 
   tf-plan-int-mgmt:
     runs-on: ubuntu-latest
-    environment: int-mgmt
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
