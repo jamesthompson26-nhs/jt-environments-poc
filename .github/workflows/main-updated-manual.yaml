@@ -1,4 +1,4 @@
-name: Main Updated Manual
+name: Persistent Environments
 
 on:
   workflow_dispatch:
