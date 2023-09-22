@@ -30,7 +30,7 @@ on:
 env:
   ACCOUNT: ${{ secrets[format('{0}_AWS_ACCOUNT_ID', inputs.environment)] }}
   APIM_ENVIRONMENT: ${{ secrets[format('{0}_APIM_ENVIRONMENT', inputs.environment)] }}
-  APIM_APP_ID: ${{ secrets[format('{0}_APIM_APP_ID', inputs.environment)] }}
+  APIM_TEST_APP_ID: ${{ secrets[format('{0}_APIM_TEST_APP_ID', inputs.environment)] }}
 
 
 jobs:
@@ -84,7 +84,7 @@ jobs:
     steps:
       - name: Run Behave Tests
         if: ${{ inputs.deploy_events }}
-        run: echo Running Behave Tests against ${{ env.APIM_APP_ID }}
+        run: echo Running Behave Tests against ${{ env.APIM_TEST_APP_ID }}
 
       - name: Run APIM Smoke Tests
         if: ${{ inputs.deploy_events }}
