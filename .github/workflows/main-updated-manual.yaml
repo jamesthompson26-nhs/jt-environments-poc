@@ -18,13 +18,13 @@ on:
         type: boolean
         description: Deploy MNS Events stack
         default: false
-      dryrun_mgmt:
+      plan_mgmt:
         type: boolean
-        description: Dry-run MGMT stack deployment
+        description: Plan MGMT stack deployment
         default: false
-      dryrun_events:
+      plan_events:
         type: boolean
-        description: Dry-run MNS Events stack deployment
+        description: Plan MNS Events stack deployment
         default: false
 
 env:
@@ -51,11 +51,11 @@ jobs:
         run: echo Doing other pre-deployment stuff
 
       - name: Run TF Plan against MGMT
-        if: ${{ inputs.deploy_mgmt || inputs.dryrun_mgmt}}
+        if: ${{ inputs.deploy_mgmt || inputs.plan_mgmt}}
         run: echo Running TF plan against mgmt
 
       - name: Run TF Plan against Events
-        if: ${{ inputs.deploy_events || inputs.dryrun_events}}
+        if: ${{ inputs.deploy_events || inputs.plan_events}}
         run: echo Running TF plan against mgmt
 
   deploy:
