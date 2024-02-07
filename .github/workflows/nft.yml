@@ -7,7 +7,7 @@ on:
       apim_environment:
         type: string
         description: The APIM Environment to run NFT against.
-        default: 'internal-dev'
+        default: 'dummy'
       ramp_up:
         type: string
         description: How many seconds to spend ramping up to the target volume.
