@@ -47,6 +47,9 @@ jobs:
       - name: Install Dependencies
         run: pip install -r .github/requirements.txt
 
+      - name: Check Python
+        run: python3 --version
+
       - name: Run JMeter Tests
         uses: QAInsights/PerfAction@v3.1
         with:
