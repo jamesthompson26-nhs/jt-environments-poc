@@ -42,7 +42,7 @@ jobs:
       - name: Run JMeter Tests
         uses: QAInsights/PerfAction@v3.1
         with:
-          test-plan-path: ../../scripts/load-generating-jmeter/jmeter-load-suite.jmx
+          test-plan-path: ../jmeter-load-suite.jmx
           args: -J apim_env=${{ inputs.apim_environment }} -J ramp_up=${{ inputs.ramp_up }} -J thread_count=${{ inputs.thread_count }} -J tps=${{ inputs.tps }} -J duration=${{ inputs.duration }}
 
       - name: Upload Results
